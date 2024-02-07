@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+		<pattern>*</pattern>
+		<template>Hello! I'm <bot name="name"/>. Would you like me to help you identify a starting point for your career in technology?
+			<think>
+				<set name="topic">INTRODUCTION</set>
+			</think>
+			<delay>1</delay>
+			<button>
+				<text>Yes</text>
+				<postback>Yes</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>No</postback>
+			</button>
+		</template>
+	</category>
+</aiml>

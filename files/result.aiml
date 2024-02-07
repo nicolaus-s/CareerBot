@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="RESULT">
+		<category>
+			<pattern>RESULT</pattern>
+			<template>
+				<delay>3</delay>
+				I think you'd enjoy being...
+				<delay>3</delay>
+				<condition name="score">
+					<li value="0">a Network Engineer!</li>
+					<li value="1">a Network Architect!</li>
+					<li value="2">a Software Support Engineer!</li>
+					<li value="3">a Solutions Architect!</li>
+					<li value="4">a Software Maintenance Engineer!</li>
+					<li value="5">a Software Developer!</li>
+					<li value="6">a DevOps Support Engineer!</li>
+					<li value="7">an Application Developer!</li>
+				</condition>
+				<think>
+					<set name="topic">*</set>
+				</think>
+			</template>
+		</category>
+	</topic>
+</aiml>

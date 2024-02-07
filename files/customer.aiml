@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="CUSTOMER">
+		<category>
+			<pattern>YES</pattern>
+			<template>
+				That's wonderful! Serving others is a wonderful way to give back to the world.
+				<delay>3</delay>
+				One more question...
+				<delay>3</delay>
+				Do you prefer to read and write code? If not, there's many opportunities to work with existing software tools.
+				<think>
+					<set name="topic">CODE</set>
+					<condition name="score">
+						<li value="0">
+							<set name="score">2</set>
+						</li>
+						<li value="1">
+							<set name="score">3</set>
+						</li>
+					</condition>
+				</think>
+				<button>
+					<text>Yes</text>
+					<postback>Yes</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>No</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>No problem, collaboration is key to being a great team member!<delay>3</delay>One more question...<delay>3</delay>Do you prefer to read and write code? If not, there's many opportunities to work with existing software tools.
+				<think>
+					<set name="topic">CODE</set>
+				</think>
+				<button>
+					<text>Yes</text>
+					<postback>Yes</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>No</postback>
+				</button>
+			</template>
+		</category>
+	</topic>
+</aiml>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="CODE">
+		<category>
+			<pattern>YES</pattern>
+			<template>
+				Awesome, you enjoy the inner-workings of things. You must be a very curious person.
+				<delay>3</delay>
+				Almost done...
+				<delay>3</delay>
+				The results are in! Click 'See Results' to see what I think!
+				<think>
+					<set name="topic">RESULT</set>
+					<condition name="score">
+						<li value="0">
+							<set name="score">4</set>
+						</li>
+						<li value="1">
+							<set name="score">5</set>
+						</li>
+						<li value="2">
+							<set name="score">6</set>
+						</li>
+						<li value="3">
+							<set name="score">7</set>
+						</li>
+					</condition>
+				</think>
+				<button>
+					<text>See Results</text>
+					<postback>Result</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>
+				There's many important and powerful software tools to become proficient in.
+				<delay>3</delay>
+				Almost done...
+				<delay>3</delay>
+				The results are in! Click 'See Results' to see what I think!
+				<think>
+					<set name="topic">RESULT</set>
+				</think>
+				<button>
+					<text>See Results</text>
+					<postback>Result</postback>
+				</button>
+			</template>
+		</category>
+	</topic>
+</aiml>

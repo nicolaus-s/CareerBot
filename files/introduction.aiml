@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="INTRODUCTION">
+		<category>
+			<pattern>YES</pattern>
+			<delay>3</delay>
+			<template>
+				Great! Let's get started.
+				<delay>3</delay>
+				Do you enjoy building things? If not, you can always help fix things too!
+				<think>
+					<set name="topic">PROACTIVE</set>
+				</think>
+				<button>
+					<text>Yes</text>
+					<postback>Yes</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>No</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<delay>3</delay>
+			<template>
+				I'm sorry, I'm afraid I can't help you then. Please come back when you're ready to discuss career options!
+				<think>
+					<set name="topic">*</set>
+				</think>
+			</template>
+		</category>
+	</topic>
+</aiml>

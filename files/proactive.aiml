@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="PROACTIVE">
+		<category>
+			<pattern>YES</pattern>
+			<template>
+				I see, so you like to create! I'm sure you have many great ideas.
+				<delay>3</delay>
+				Let's move on...
+				<delay>3</delay>
+				Do you enjoy providing great customer service? If not, there's positions in which you only work with your direct team.
+				<think>
+					<set name="score">1</set>
+					<set name="topic">CUSTOMER</set>
+				</think>
+				<button>
+					<text>Yes</text>
+					<postback>Yes</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>No</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>
+				Ah, a troubleshooter! Fixing things is a great challenge.
+				<delay>3</delay>
+				Let's move on...
+				<delay>3</delay>
+				Do you enjoy providing great customer service? If not, there's positions in which you only work with your direct team.
+				<think>
+					<set name="score">0</set>
+					<set name="topic">CUSTOMER</set>
+				</think>
+				<button>
+					<text>Yes</text>
+					<postback>Yes</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>No</postback>
+				</button>
+			</template>
+		</category>
+	</topic>
+</aiml>
